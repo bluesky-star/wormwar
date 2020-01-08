@@ -21,7 +21,6 @@ end
 function WormWar:InitGameMode()
 	print( "Template addon is loaded." )
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
-	GameRules:SetPreGameTime( 15.0)
 end
 
 -- Evaluate the state of the game
@@ -60,10 +59,15 @@ function createunit()
 		local position_bad = location_bad:GetOrigin()
 		print(i)
 		CreateUnitByName(a[i],position_good, true, nil, nil, DOTA_TEAM_GOODGUYS)
-		CreateUnitByName(m[i],position_bad, true, nil, nil, DOTA_TEAM_BADGUYS)		
+		--goodguy:SetMustReachEachGoalEntity(true)
+		--goodguy:SetInitialGoalEntity(Entities:FindByName(nil,"pos_good"))
+		local badguy = CreateUnitByName(m[i],position_bad, true, nil, nil, DOTA_TEAM_BADGUYS)		
+		--badguy:SetMustReachEachGoalEntity(true)
+		--badguy:SetInitialGoalEntity(Entities:FindByName(nil,"pos_bad"))
 		temp_flag = temp_flag + 1
 	end
 	
 	CreateUnitByName("npc_dota_hero_drow_ranger",Entities:FindByName(nil, "pos110"):GetOrigin(), true, nil, nil, DOTA_TEAM_BADGUYS)
-	
+	--boss:SetMustReachEachGoalEntity(true)
+	--boss:SetInitialGoalEntity(Entities:FindByName(nil,"pos_bad"))
 end
