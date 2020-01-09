@@ -1,4 +1,5 @@
 "CustomHeroList"
 {
-  "npc_dota_hero_crystal_maiden"     "-1"
+  "npc_dota_hero_crystal_maiden"     "1"
+  "npc_dota_hero_nyx_assassin"       "1"
 }

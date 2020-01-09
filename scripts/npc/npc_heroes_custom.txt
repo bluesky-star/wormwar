@@ -8,53 +8,22 @@
         "MovementTurnRate"          "1"                       // 转身速度
         "StatusHealth"				"1"
 	}
+	
+	
+	"icegirl"
+	{
+		"override_hero"				"npc_dota_hero_crystal_maiden"
+	    "Models"                    "models/heroes/nerubian_assassin/nerubian_assassin.vmdl"
+		"Ability1"					"jakiro_ice_path"
+		"Ability2"					"undying_tombstone"
+	}
 }
 
 
-	"kuku"	
-	{   
-	    "override_hero"				"npc_dota_hero_nyx_assassin"
-		"Model"		                "models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_skeleton_melee.vmdl"
-		"ModelScale"                "1"
+市场分析
 
+竞品参考
 
-		"MinimapIcon" ""
-   		"MinimapIconSize" "50"
-    	"HealthBarOffset" "-1"
-    	"Ability1" "" 
-  	  	"Ability2" ""
-  	  	"Ability3" ""
-    	"Ability4" ""
-  	  	"Ability5" ""
-    	"Ability6" ""
-  	  	"Ability7" ""
-    	"Ability8" ""
-   	 	"ArmorPhysical" "3"                                             
-    	"MagicalResistance" "0"
-    	"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"                
- 		"AttackDamageMin" "30.5"                                                  
-  		"AttackDamageMax" "31"                                                  
- 		"AttackRate""0.45"                                         
-  		"AttackAnimationPoint" "1"                                  
- 		"AttackAcquisitionRange" "500"                                
-   		"AttackRange" "400"
-    	"ProjectileModel" ""
-    	"ProjectileSpeed" ""
-	    "BountyXP" "0"
-    	"BountyGoldMin" "3"                                          
-    	"BountyGoldMax" "3"
-    	"BoundsHullName" "DOTA_HULL_SIZE_SMALL"
-    	"RingRadius" "15"                                               
-  		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                
-        "MovementSpeed" "225"                                             
-        "MovementTurnRate" "1.5"                                           
-    	"StatusHealth"				"1"                             
-    	"StatusHealthRegen" "0"                                     
-    	"StatusMana" "0"
-    	"StatusManaRegen" "0"
-   		"TeamName" "DOTA_TEAM_NEUTRALS"                                
-    	"CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_PIRECE"            
-    	"CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_SOFT"         
-    	"UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-    	"VisionDaytimeRange" "1500"
-	}
+核心玩法
+
+特色系统

@@ -16,39 +16,45 @@ end
 function Activate()
 	GameRules.AddonTemplate = WormWar()
 	GameRules.AddonTemplate:InitGameMode()
+	GameRules:SetCustomGameSetupAutoLaunchDelay( 10 )
+	GameRules:SetPreGameTime(12)
 end
 
 function WormWar:InitGameMode()
 	print( "Template addon is loaded." )
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
+	ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(WormWar,"OnGameRulesStateChange"), self)
 end
 
 -- Evaluate the state of the game
 function WormWar:OnThink()
     --玩家初始化
-	
-	if temp_flag == 0 then
-		createunit()
-		temp_flag = temp_flag + 1
-	end	
-	
-	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-		--print( "Template addon script is running." )
-	elseif GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
-		return nil
-	end
-
-	
 	return 1
 end
 
 
+function WormWar:OnGameRulesStateChange( keys )
+        print("OnGameRulesStateChange")
+
+        --获取游戏进度
+        local newState = GameRules:State_Get()
+
+        --游戏开始
+        if newState==DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
+                createunit()
+        end
+end
+
+
 function createunit()
-    a = {"dragon_knight","dragon_knight","dragon_knight","omniknight","omniknight","omniknight","sniper","sniper","sniper"}
+    a = {"dragon_knight","dragon_knight","dragon_knight","none","omniknight","none","sniper","sniper","sniper"}
 	p = {"pos1","pos2","pos3","pos4","pos5","pos6","pos7","pos8","pos9",}
 	
-	m = {"kulou","npc_dota_hero_skeleton_king","kulou","npc_dota_hero_clinkz","npc_dota_hero_clinkz","npc_dota_hero_clinkz","npc_dota_hero_pugna","npc_dota_hero_pugna","npc_dota_hero_pugna"}
+	m = {"kulou","npc_dota_hero_skeleton_king","kulou","pugna","drow_ranger","pugna","clinkz","clinkz","clinkz"}
 	n = {"pos101","pos102","pos103","pos104","pos105","pos106","pos107","pos108","pos109"}
+
+	good = {"pos_good1","pos_good2","pos_good3","pos_good1","pos_good2","pos_good3","pos_good1","pos_good2","pos_good3"}
+	bad = {"pos_bad1","pos_bad2","pos_bad3","pos_bad1","pos_bad2","pos_bad3","pos_bad1","pos_bad2","pos_bad3"}
 
 	for i=1,9,1 do
 		print(i)
@@ -58,16 +64,19 @@ function createunit()
 		local position_good = location_good:GetOrigin()
 		local position_bad = location_bad:GetOrigin()
 		print(i)
-		CreateUnitByName(a[i],position_good, true, nil, nil, DOTA_TEAM_GOODGUYS)
-		--goodguy:SetMustReachEachGoalEntity(true)
-		--goodguy:SetInitialGoalEntity(Entities:FindByName(nil,"pos_good"))
-		local badguy = CreateUnitByName(m[i],position_bad, true, nil, nil, DOTA_TEAM_BADGUYS)		
-		--badguy:SetMustReachEachGoalEntity(true)
-		--badguy:SetInitialGoalEntity(Entities:FindByName(nil,"pos_bad"))
+		local goodguy = CreateUnitByName(a[i],position_good, true, nil, nil, DOTA_TEAM_GOODGUYS)
+		goodguy:SetMustReachEachGoalEntity(true)
+		goodguy:SetInitialGoalEntity(Entities:FindByName(nil,good[i]))
+		local badguy = CreateUnitByName(m[i],position_bad, true, nil, nil, DOTA_TEAM_BADGUYS)	
+		badguy:SetMustReachEachGoalEntity(true)
+		badguy:SetInitialGoalEntity(Entities:FindByName(nil,bad[i]))
 		temp_flag = temp_flag + 1
 	end
 	
-	CreateUnitByName("npc_dota_hero_drow_ranger",Entities:FindByName(nil, "pos110"):GetOrigin(), true, nil, nil, DOTA_TEAM_BADGUYS)
-	--boss:SetMustReachEachGoalEntity(true)
-	--boss:SetInitialGoalEntity(Entities:FindByName(nil,"pos_bad"))
+
 end
+
+
+
+
+	

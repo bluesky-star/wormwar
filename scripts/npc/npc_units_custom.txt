@@ -26,27 +26,27 @@
     	"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"               
  		"AttackDamageMin" "30.5"                                                  //最小攻击力
   		"AttackDamageMax" "31"                                                  //最大攻击力
- 		"AttackRate""0.45"                                            //攻速
+ 		"AttackRate""1.5"                                            //攻速
   		"AttackAnimationPoint" "1"                                  
- 		"AttackAcquisitionRange" "500"                                  //攻击距离
-   		"AttackRange" "400"
+ 		"AttackAcquisitionRange" "200"                                  //攻击距离
+   		"AttackRange" "200"
     	"ProjectileModel" ""
     	"ProjectileSpeed" ""
 	    "BountyXP" "0"
     	"BountyGoldMin" "3"                                          
     	"BountyGoldMax" "3"
-    	"BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+    	"BoundsHullName" "DOTA_HULL_SIZE_HERO"
     	"RingRadius" "15"                                               
   		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                
         "MovementSpeed" "225"                                             
         "MovementTurnRate" "1.5"                                           
-    	"StatusHealth"				"10000"                             
+    	"StatusHealth"				"2000"                             
     	"StatusHealthRegen" "0"                                     
     	"StatusMana" "0"
     	"StatusManaRegen" "0"
    		"TeamName" "DOTA_TEAM_NEUTRALS"                                
     	"CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_PIERCE"             //攻击类型
-    	"CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRONG"              //护甲类型
+    	"CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
     	"UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     	"VisionDaytimeRange" "1500"
 		
@@ -85,27 +85,27 @@
     	"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"               
  		"AttackDamageMin" "30.5"                                                  //最小攻击力
   		"AttackDamageMax" "31"                                                  //最大攻击力
- 		"AttackRate""0.45"                                            //攻速
+ 		"AttackRate""1.2"                                            //攻速
   		"AttackAnimationPoint" "1"                                  
- 		"AttackAcquisitionRange" "500"                                  //攻击距离
-   		"AttackRange" "400"
+ 		"AttackAcquisitionRange" "200"                                  //攻击距离
+   		"AttackRange" "200"
     	"ProjectileModel" ""
     	"ProjectileSpeed" ""
 	    "BountyXP" "0"
     	"BountyGoldMin" "3"                                          
     	"BountyGoldMax" "3"
-    	"BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+    	"BoundsHullName" "DOTA_HULL_SIZE_HERO"
     	"RingRadius" "15"                                               
   		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                
         "MovementSpeed" "225"                                             
         "MovementTurnRate" "1.5"                                           
-    	"StatusHealth"				"10000"                             
+    	"StatusHealth"				"2000"                             
     	"StatusHealthRegen" "0"                                     
     	"StatusMana" "0"
     	"StatusManaRegen" "0"
    		"TeamName" "DOTA_TEAM_NEUTRALS"                                
     	"CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_PIERCE"             //攻击类型
-    	"CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRONG"              //护甲类型
+    	"CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
     	"UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     	"VisionDaytimeRange" "1500"
 		"Creature"
@@ -140,32 +140,92 @@
     	"Ability8" ""
    	 	"ArmorPhysical" "3"                                             
     	"MagicalResistance" "0"
-    	"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK "                 
+    	"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 
  		"AttackDamageMin" "30.5"                                                  
   		"AttackDamageMax" "31"                                                 
- 		"AttackRate""0.45"                                         
+ 		"AttackRate""1.5"                                         
   		"AttackAnimationPoint" "1"                                  
- 		"AttackAcquisitionRange" "500"                                 
-   		"AttackRange" "400"
+ 		"AttackAcquisitionRange" "200"                                 
+   		"AttackRange" "200"
     	"ProjectileModel" ""
     	"ProjectileSpeed" ""
 	    "BountyXP" "0"
     	"BountyGoldMin" "3"                                          
     	"BountyGoldMax" "3"
-    	"BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+    	"BoundsHullName" "DOTA_HULL_SIZE_HERO"
     	"RingRadius" "15"                                               
   		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                
         "MovementSpeed" "225"                                             
         "MovementTurnRate" "1.5"                                           
-    	"StatusHealth"				"1"                             
+    	"StatusHealth"				"2000"                             
     	"StatusHealthRegen" "0"                                     
     	"StatusMana" "0"
     	"StatusManaRegen" "0"
    		"TeamName" "DOTA_TEAM_NEUTRALS"                                
     	"CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_PIERCE"            
-    	"CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRONG"        
+    	"CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"        
     	"UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     	"VisionDaytimeRange" "1500"
+	}
+	
+	
+	"pugna"
+	{
+	    "BaseClass"                 "npc_dota_creature"
+        "Model"                     "models/heroes/pugna/pugna.vmdl"
+        "ModelScale"                "1"
+
+        "MinimapIcon" ""
+   		"MinimapIconSize" "50"
+    	"HealthBarOffset" "-1"
+    	"Ability1" "jakiro_ice_path"  
+  	  	"Ability2" ""
+  	  	"Ability3" ""
+    	"Ability4" ""
+  	  	"Ability5" ""
+    	"Ability6" ""
+  	  	"Ability7" ""
+    	"Ability8" ""
+   	 	"ArmorPhysical" "3"                                             
+    	"MagicalResistance" "0"
+    	"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"                 
+ 		"AttackDamageMin" "30.5"                                                  
+  		"AttackDamageMax" "31"                                                 
+ 		"AttackRate""2.5"                                         
+  		"AttackAnimationPoint" "1"                                  
+ 		"AttackAcquisitionRange" "600"                                 
+   		"AttackRange" "600"
+    	"ProjectileModel" "particles/units/heroes/hero_pugna/pugna_base_attack.vpcf"
+    	"ProjectileSpeed" "900"
+	    "BountyXP" "0"
+    	"BountyGoldMin" "3"                                          
+    	"BountyGoldMax" "3"
+    	"BoundsHullName" "DOTA_HULL_SIZE_HERO"
+    	"RingRadius" "15"                                               
+  		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                
+        "MovementSpeed" "225"                                             
+        "MovementTurnRate" "1.5"                                           
+    	"StatusHealth"				"3000"                             
+    	"StatusHealthRegen" "0"                                     
+    	"StatusMana" "500"
+    	"StatusManaRegen" "10"
+   		"TeamName" "DOTA_TEAM_NEUTRALS"                                
+    	"CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_PIERCE"            
+    	"CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"        
+    	"UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+    	"VisionDaytimeRange" "1500"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"	{ "ItemDef" "153" }  //头饰
+				"Wearable2"	{ "ItemDef"	"157" }  //围巾
+				"Wearable3" { "ItemDef"	"154" }  //披风
+				"Wearable4" { "ItemDef"	"155" }  //护腕
+				"Wearable5" { "ItemDef"	"156" }  //武器
+				"Wearable6" { "ItemDef"	"167" }  //肩膀
+			}
+		}
 	}
 
 
@@ -191,27 +251,28 @@
     	"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"               
  		"AttackDamageMin" "30.5"                                                  //最小攻击力
   		"AttackDamageMax" "31"                                                  //最大攻击力
- 		"AttackRate""0.45"                                            //攻速
+ 		"AttackRate""1.5"                                            //攻速
   		"AttackAnimationPoint" "1"                                  
  		"AttackAcquisitionRange" "1500"                                  //攻击距离
    		"AttackRange" "1200"
-    	"ProjectileModel" ""
-    	"ProjectileSpeed" ""
+		"ProjectileModel" "particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"
+		"ProjectileSpeed" "1800"
+		"AttackDamageType" "DAMAGE_TYPE_ArmorPhysical"
 	    "BountyXP" "0"
     	"BountyGoldMin" "3"                                          
     	"BountyGoldMax" "3"
-    	"BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+    	"BoundsHullName" "DOTA_HULL_SIZE_HERO"
     	"RingRadius" "15"                                               
   		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                
         "MovementSpeed" "225"                                             
         "MovementTurnRate" "1.5"                                           
-    	"StatusHealth"				"10000"                             
+    	"StatusHealth"				"3000"                             
     	"StatusHealthRegen" "0"                                     
     	"StatusMana" "0"
     	"StatusManaRegen" "0"
    		"TeamName" "DOTA_TEAM_NEUTRALS"                                
     	"CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_PIERCE"             //攻击类型
-    	"CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRONG"              //护甲类型
+    	"CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
     	"UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     	"VisionDaytimeRange" "3500"
 		"Creature"
@@ -227,5 +288,167 @@
 			}
 		}
 	}	
+
+  "clinkz"
+  {
+        "BaseClass"                 "npc_dota_creature"
+        "Model"                     "models/heroes/clinkz/clinkz.vmdl"
+        "ModelScale"                "1"
+        "MinimapIcon" ""
+      "MinimapIconSize" "50"
+      "HealthBarOffset" "-1"
+      "Ability1" ""  //无
+        "Ability2" ""
+        "Ability3" ""
+      "Ability4" ""
+        "Ability5" ""
+      "Ability6" ""
+        "Ability7" ""
+      "Ability8" ""
+      "ArmorPhysical" "3"                                             
+      "MagicalResistance" "0"
+      "AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"               
+    "AttackDamageMin" "30.5"                                                  //最小攻击力
+      "AttackDamageMax" "31"                                                  //最大攻击力
+    "AttackRate""1.8"                                            //攻速
+      "AttackAnimationPoint" "1"                                  
+    "AttackAcquisitionRange" "1000"                                  //攻击距离
+      "AttackRange" "1000"
+      "ProjectileModel" "particles/neutral_fx/gnoll_base_attack.vpcf"
+      "ProjectileSpeed" "1500"
+	  "AttackDamageType" "DAMAGE_TYPE_ArmorPhysical"
+      "BountyXP" "0"
+      "BountyGoldMin" "3"                                          
+      "BountyGoldMax" "3"
+      "BoundsHullName" "DOTA_HULL_SIZE_HERO"
+      "RingRadius" "15"                                               
+      "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                
+        "MovementSpeed" "225"                                             
+        "MovementTurnRate" "1.5"                                           
+      "StatusHealth"        "3000"                             
+      "StatusHealthRegen" "0"                                     
+      "StatusMana" "0"
+      "StatusManaRegen" "0"
+      "TeamName" "DOTA_TEAM_NEUTRALS"                                
+      "CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_PIERCE"             //攻击类型
+      "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
+      "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+      "VisionDaytimeRange" "1800"
+    "Creature"
+    {
+      "AttachWearables"
+      {
+        "Wearable1" { "ItemDef" "61" }    //手套
+        "Wearable2" { "ItemDef" "8290" }  //头
+        "Wearable3" { "ItemDef" "57" }    //箭
+        "Wearable4" { "ItemDef" "7142" }  //肩膀
+        "Wearable5" { "ItemDef" "8293" }  //披风
+      }
+    }
+  } 
+	
+    "none"
+  {
+        "BaseClass"                 "npc_dota_creature"
+        "Model"                     "models/development/invisiblebox.vmdl"
+        "ModelScale"                "1"
+        "MinimapIcon" ""
+      "MinimapIconSize" "50"
+      "HealthBarOffset" "1000000"
+      "Ability1" ""  //无
+        "Ability2" ""
+        "Ability3" ""
+      "Ability4" ""
+        "Ability5" ""
+      "Ability6" ""
+        "Ability7" ""
+      "Ability8" ""
+      "ArmorPhysical" "3"                                             
+      "MagicalResistance" "0"
+      "AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"               
+    "AttackDamageMin" "0"                                                  //最小攻击力
+      "AttackDamageMax" "0"                                                  //最大攻击力
+    "AttackRate""0.8"                                            //攻速
+      "AttackAnimationPoint" "1"                                  
+    "AttackAcquisitionRange" "100"                                  //攻击距离
+      "AttackRange" "100"
+      "ProjectileModel" ""
+      "ProjectileSpeed" ""
+      "BountyXP" "0"
+      "BountyGoldMin" "3"                                          
+      "BountyGoldMax" "3"
+      "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+      "RingRadius" "15"                                               
+      "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_NONE"                
+        "MovementSpeed" "225"                                             
+        "MovementTurnRate" "1.5"                                           
+      "StatusHealth"        "1"                             
+      "StatusHealthRegen" "0"                                     
+      "StatusMana" "0"
+      "StatusManaRegen" "0"
+      "TeamName" "DOTA_TEAM_NEUTRALS"                                
+      "CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_PIERCE"             //攻击类型
+      "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
+      "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+      "VisionDaytimeRange" "100"
+  } 
+    "drow_ranger"
+  {
+        "BaseClass"                 "npc_dota_creature"
+        "Model"                     "models/heroes/drow/drow_base.vmdl"
+        "ModelScale"                "1"
+        "MinimapIcon" ""
+      "MinimapIconSize" "50"
+      "HealthBarOffset" "-1"
+      "Ability1" ""  //无
+        "Ability2" ""
+        "Ability3" ""
+      "Ability4" ""
+        "Ability5" ""
+      "Ability6" ""
+        "Ability7" ""
+      "Ability8" ""
+      "ArmorPhysical" "3"                                             
+      "MagicalResistance" "0"
+      "AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"               
+    "AttackDamageMin" "30.5"                                                  //最小攻击力
+      "AttackDamageMax" "31"                                                  //最大攻击力
+    "AttackRate""1.8"                                            //攻速
+      "AttackAnimationPoint" "1"                                  
+    "AttackAcquisitionRange" "800"                                  //攻击距离
+      "AttackRange" "800"
+      "ProjectileModel" "particles/units/heroes/hero_drow/drow_base_attack.vpcf"
+      "ProjectileSpeed" "1250"
+	  "AttackDamageType" "DAMAGE_TYPE_ArmorPhysical"
+      "BountyXP" "0"
+      "BountyGoldMin" "3"                                          
+      "BountyGoldMax" "3"
+      "BoundsHullName" "DOTA_HULL_SIZE_HERO"
+      "RingRadius" "15"                                               
+      "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                
+        "MovementSpeed" "225"                                             
+        "MovementTurnRate" "1.5"                                           
+      "StatusHealth"        "3000"                             
+      "StatusHealthRegen" "0"                                     
+      "StatusMana" "0"
+      "StatusManaRegen" "0"
+      "TeamName" "DOTA_TEAM_NEUTRALS"                                
+      "CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_PIERCE"             //攻击类型
+      "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
+      "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+      "VisionDaytimeRange" "1800"
+      "Creature"
+      {
+      "AttachWearables"
+        {
+        "Wearable1" { "ItemDef" "75" }    //手套
+        "Wearable2" { "ItemDef" "76" }    //披风
+        "Wearable3" { "ItemDef" "267" }   //帽子
+        "Wearable4" { "ItemDef" "78" }    //护腿
+        "Wearable5" { "ItemDef" "79" }    //箭袋
+		"Wearable6" { "ItemDef" "4365" }  //弓
+        }
+    }
+  } 
 	
 }
