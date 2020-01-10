@@ -15,15 +15,7 @@
 		"override_hero"				"npc_dota_hero_crystal_maiden"
 	    "Models"                    "models/heroes/nerubian_assassin/nerubian_assassin.vmdl"
 		"Ability1"					"jakiro_ice_path"
-		"Ability2"					"undying_tombstone"
+		"Ability2"					"lone_druid_spirit_bear"
 	}
 }
 
-
-市场分析
-
-竞品参考
-
-核心玩法
-
-特色系统

@@ -121,6 +121,54 @@
 			}
 		}
 	}
+	
+		"kulouking"
+	{
+        "BaseClass"                 "npc_dota_creature"
+        "Model"                     "models/heroes/wraith_king/wraith_frost.vmdl"
+        "ModelScale"                "1"
+        "MinimapIcon" ""
+   		"MinimapIconSize" "50"
+    	"HealthBarOffset" "-1"
+    	"Ability1" ""  //无
+  	  	"Ability2" ""
+  	  	"Ability3" ""
+    	"Ability4" ""
+  	  	"Ability5" ""
+    	"Ability6" ""
+  	  	"Ability7" ""
+    	"Ability8" ""
+   	 	"ArmorPhysical" "3"                                             
+    	"MagicalResistance" "0"
+    	"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"               
+ 		"AttackDamageMin" "30.5"                                                  //最小攻击力
+  		"AttackDamageMax" "31"                                                  //最大攻击力
+ 		"AttackRate""1.2"                                            //攻速
+  		"AttackAnimationPoint" "1"                                  
+ 		"AttackAcquisitionRange" "200"                                  //攻击距离
+   		"AttackRange" "200"
+    	"ProjectileModel" ""
+    	"ProjectileSpeed" ""
+	    "BountyXP" "0"
+    	"BountyGoldMin" "3"                                          
+    	"BountyGoldMax" "3"
+    	"BoundsHullName" "DOTA_HULL_SIZE_HERO"
+    	"RingRadius" "15"                                               
+  		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                
+        "MovementSpeed" "125"                                             
+        "MovementTurnRate" "1.5"                                           
+    	"StatusHealth"				"2000"                             
+    	"StatusHealthRegen" "0"                                     
+    	"StatusMana" "0"
+    	"StatusManaRegen" "0"
+   		"TeamName" "DOTA_TEAM_NEUTRALS"                                
+    	"CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_PIERCE"             //攻击类型
+    	"CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
+    	"UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+    	"VisionDaytimeRange" "1500"
+
+	}
+	
 	"kulou"
 	{
 	    "BaseClass"                 "npc_dota_creature"
@@ -203,7 +251,7 @@
     	"BoundsHullName" "DOTA_HULL_SIZE_HERO"
     	"RingRadius" "15"                                               
   		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                
-        "MovementSpeed" "225"                                             
+        "MovementSpeed" "285"                                             
         "MovementTurnRate" "1.5"                                           
     	"StatusHealth"				"3000"                             
     	"StatusHealthRegen" "0"                                     

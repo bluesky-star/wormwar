@@ -24,6 +24,7 @@ function WormWar:InitGameMode()
 	print( "Template addon is loaded." )
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
 	ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(WormWar,"OnGameRulesStateChange"), self)
+	ListenToGameEvent("npc_spawned", Dynamic_Wrap(WormWar, "OnNPCSpawned"), self)
 end
 
 -- Evaluate the state of the game
@@ -50,7 +51,7 @@ function createunit()
     a = {"dragon_knight","dragon_knight","dragon_knight","none","omniknight","none","sniper","sniper","sniper"}
 	p = {"pos1","pos2","pos3","pos4","pos5","pos6","pos7","pos8","pos9",}
 	
-	m = {"kulou","npc_dota_hero_skeleton_king","kulou","pugna","drow_ranger","pugna","clinkz","clinkz","clinkz"}
+	m = {"kulou","kulouking","kulou","pugna","drow_ranger","pugna","clinkz","clinkz","clinkz"}
 	n = {"pos101","pos102","pos103","pos104","pos105","pos106","pos107","pos108","pos109"}
 
 	good = {"pos_good1","pos_good2","pos_good3","pos_good1","pos_good2","pos_good3","pos_good1","pos_good2","pos_good3"}
@@ -78,5 +79,16 @@ end
 
 
 
+function WormWar:OnNPCSpawned( keys )
+  local spawnedUnit = EntIndexToHScript( keys.entindex )
+  if spawnedUnit:IsHero() then
+    local level = spawnedUnit:GetLevel()
+	spawnedUnit:HeroLevelUp(true)
+    spawnedUnit:HeroLevelUp(true)
+	spawnedUnit:HeroLevelUp(true)
+	spawnedUnit:HeroLevelUp(true)
+	spawnedUnit:HeroLevelUp(true)
+  end
+end
 
 	
