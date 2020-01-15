@@ -17,7 +17,7 @@ function Activate()
 	GameRules.AddonTemplate = WormWar()
 	GameRules.AddonTemplate:InitGameMode()
 	GameRules:SetCustomGameSetupAutoLaunchDelay( 10 )
-	GameRules:SetPreGameTime(12)
+	GameRules:SetPreGameTime(10)
 end
 
 function WormWar:InitGameMode()

@@ -61,6 +61,15 @@
 			}
 		}		
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+		"OnSpellStart"
+		{                                                            
+		  "SpawnUnit"
+			{
+			  "UnitName"               "kulou"                                         
+			  "UnitCount"              "1"                                         
+			  "SpawnRadius"            "100"
+			}
+		}		
 
 	}
 
@@ -162,7 +171,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bear_hp"					"1100 1400 1700 2000"
+				"bear_hp"					"1800 2000 2200 2500"
 			}
 			"02"
 			{
@@ -202,6 +211,385 @@
 	}
 	
 	
+		"comekulou"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3000"									// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"						"ability_datadriven"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Jakiro.IcePath"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1500"
+		"AbilityCastPoint"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5.0 5.0 5.0 5.0"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"		
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"path_delay"				"0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"5 5.5 6.0 7.0"
+				"LinkedSpecialBonus"		"special_bonus_unique_jakiro"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"path_radius"				"150"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"50"
+			}
+		}		
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+		"OnSpellStart"
+		{                                                            
+		  "SpawnUnit"
+			{
+			  "UnitName"               "kulou"                                         
+			  "UnitCount"              "1"                                         
+			  "SpawnRadius"            "100"
+			}
+		}		
+
+	}
+	
+	
+	"omniknight_purification"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5263"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Omniknight.Purification"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.2"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"17 15 13 11"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"85 100 115 130"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal"					"800 800 800 800"
+				"LinkedSpecialBonus"	"special_bonus_unique_omniknight_1"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"500"
+				"LinkedSpecialBonus"	"special_bonus_unique_omniknight_4"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	
+		"crystal_maiden_freezing_field"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5129"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"hero_Crystal.freezingField.wind"
+
+		"HasScepterUpgrade"			"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime"			"10"
+		"AbilityCastPoint"				"0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"110 100 90"
+		"AbilityDuration"				"10.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 400 600"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.35"	// Primarily about the damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"600"
+			}		
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"explosion_radius"	"300"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"20"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"explosion_interval"	"0.1"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"movespeed_slow"	"-30"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"attack_slow"	"-60"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"slow_duration"		"1.0"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"explosion_min_dist"	"195"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"explosion_max_dist"	"785"
+			}
+			"10"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"200 200 200"
+				"LinkedSpecialBonus"	"special_bonus_unique_crystal_maiden_3"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"scepter_delay"	"2.5"
+				"RequiresScepter"		"1"
+			}
+		}
+	}
+	
+
+		
+	"warlock_rain_of_chaos"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5165"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"2"
+		"HasScepterUpgrade"			"1"
+		"AbilitySound"					"Hero_Warlock.RainOfChaos"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.5 0.5 0.5"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"170"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50 55 50"		
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Primarily about the summon
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"golem_duration"			"60 60 60"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"				"1.0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aoe"						"600"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_hp_tooltip"			"1000 2000 3000"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_dmg_tooltip"			"100 150 200"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_armor_tooltip"		"6 9 12"
+				"LinkedSpecialBonus"		"special_bonus_unique_warlock_2"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_regen_tooltip"		"25 50 75"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"number_of_golems_scepter"	"2"
+				"RequiresScepter"		"1"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_hp_tooltip_scepter"	"750 1500 2250"
+				"RequiresScepter"		"1"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_dmg_tooltip_scepter"	"75 110 150"
+				"RequiresScepter"		"1"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hp_dmg_reduction_scepter"	"25"
+				"RequiresScepter"		"1"
+			}
+			"12"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bounty_reduction_scepter"	"50"
+				"RequiresScepter"		"1"
+			}
+		}
+	}		
+	
+		"windrunner_focusfire"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5133"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Ability.Focusfire"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"70 50 30"
+		"AbilityDuration"				"20.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70 100 125"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_attack_speed"			"475"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"focusfire_damage_reduction"	"-50 -40 -30"
+				"LinkedSpecialBonus"		"special_bonus_unique_windranger_8"
+			}						
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"focusfire_fire_on_the_move"	"1"
+			}
+		}
+	}
 }
 
 
